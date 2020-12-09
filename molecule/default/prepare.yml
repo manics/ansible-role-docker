@@ -1,0 +1,10 @@
+---
+- name: Prepare
+  hosts: all
+
+  tasks:
+    - name: Install iproute utilities
+      become: true
+      package:
+        name: iproute
+        state: present
